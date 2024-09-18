@@ -2,7 +2,10 @@
 
 Telegram bot to copy new posts from a channel to a Zola blog based on GitHub Actions.
 
+Example of adopted Zola theme: [after-dark](https://github.com/en9inerd/after-dark)
+
 ## How it works
+
 When a new post is published in a Telegram channel, the bot will create new post in the Zola blog and push it to the repository.
 
 ## ASCII diagram
@@ -10,7 +13,7 @@ When a new post is published in a Telegram channel, the bot will create new post
 ```
  +-------------------------+       +------------------+      +-----------------------+   
  | Telegram Channel        |       | Telegram Bot     |      | GitHub Repository     |
- |  (New Post Published)   | ----> |  Listens for     |      |  (Zola Blog)        |
+ |  (New Post Published)   | ----> |  Listens for     |      |  (Zola Blog)          |
  |                         |       |  New Posts       |      |                       |
  +-------------------------+       +------------------+      +-----------------------+
                                          |                                |
@@ -18,7 +21,7 @@ When a new post is published in a Telegram channel, the bot will create new post
                                          v                                |
                                  +------------------+                     |
                                  |   Creates New    |                     |
-                                 | Zola Blog Post |                     |
+                                 | Zola Blog Post   |                     |
                                  +------------------+                     |
                                          |                                |
                                          v                                |
@@ -33,7 +36,7 @@ When a new post is published in a Telegram channel, the bot will create new post
                                                                     |
                                                                     v
                                                          +----------------------------+
-                                                         | Zola Blog Website        |
+                                                         | Zola Blog Website          |
                                                          | (Post is Published)        |
                                                          +----------------------------+
 ```

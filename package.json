@@ -31,7 +31,7 @@
   "homepage": "https://github.com/en9inerd/zola-post-bot#readme",
   "dependencies": {
     "isomorphic-git": "^1.27.1",
-    "telebuilder": "file:../telebuilder/dist",
+    "telebuilder": "^0.7.13",
     "telegram": "^2.24.11"
   },
   "devDependencies": {
