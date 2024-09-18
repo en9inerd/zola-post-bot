@@ -1,0 +1,47 @@
+{
+  "name": "zola-post-bot",
+  "version": "1.0.11",
+  "description": "Bot to post telegram channel messages on website based on Zola.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node dist/entry.js",
+    "start:watch": "nodemon src/entry.ts --watch src --watch ../telebuilder --ext ts,json --delay 1",
+    "lint": "biome lint .",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "postbuild": "cp -r package.json config dist",
+    "test": "jest",
+    "prepublishOnly": "npm pkg delete scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/en9inerd/zola-post-bot.git"
+  },
+  "keywords": [
+    "telegram-api",
+    "telegram",
+    "bot"
+  ],
+  "author": "Vladimir Loskutov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/en9inerd/zola-post-bot/issues"
+  },
+  "homepage": "https://github.com/en9inerd/zola-post-bot#readme",
+  "dependencies": {
+    "isomorphic-git": "^1.27.1",
+    "telebuilder": "file:../telebuilder/dist",
+    "telegram": "^2.24.11"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "dotenv": "^16.4.5",
+    "husky": "^9.1.5",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
