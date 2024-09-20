@@ -8,7 +8,7 @@ Example of adopted Zola theme: [after-dark](https://github.com/en9inerd/after-da
 
 When a new post is published in a Telegram channel, the bot will create new post in the Zola blog and push it to the repository.
 
-## ASCII diagram
+## ASCII diagram of the workflow
 
 ```
  +-------------------------+       +------------------+      +-----------------------+   
@@ -40,3 +40,7 @@ When a new post is published in a Telegram channel, the bot will create new post
                                                          | (Post is Published)        |
                                                          +----------------------------+
 ```
+
+## Configuration
+
+All available configuration options are listed in the [config/default.js](config/default.js) file.
