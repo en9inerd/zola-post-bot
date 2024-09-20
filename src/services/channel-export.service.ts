@@ -113,7 +113,7 @@ export class ChannelExportService {
       await this.gitService.pull();
 
       try {
-        if ((await readdir(this.postsDir).catch(() => [])).length > 0) return;
+        if ((await readdir(this.postsDir).catch(() => [])).length > 1) return;
       } catch (err) {
         // ignore
       }

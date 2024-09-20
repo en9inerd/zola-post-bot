@@ -25,10 +25,6 @@ export class SyncChannelInfoCommand implements Command {
       type: 'boolean',
       required: true,
     },
-    stat: {
-      type: 'boolean',
-      required: true,
-    }
   };
 
   @inject(GitService)

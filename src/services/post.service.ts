@@ -184,8 +184,11 @@ export class PostService {
       }
 
       if (msg.photo || msg.video || msg.gif) {
-        let thumb = undefined;
-        if (msg.photo) thumb = 2;
+        let thumb: number | undefined;
+        if (msg.photo) {
+          if ((<Api.Photo>msg.photo).sizes.length < 3) thumb = (<Api.Photo>msg.photo).sizes.length - 1;
+          else thumb = 2;
+        }
         else if (msg.video) thumb = 0;
 
         const mediaFile = <Buffer>(await client.downloadMedia(msg, {

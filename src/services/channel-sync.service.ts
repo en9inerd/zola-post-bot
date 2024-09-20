@@ -11,12 +11,6 @@ const channelId = config.get<string>('botConfig.channelId');
 @injectable
 export class ChannelSyncService {
   private readonly repoDir = config.get<string>('git.repoDir');
-  private readonly configFileName = 'config.toml';
-  private readonly absPathToConfig = joinPaths(this.repoDir, this.configFileName);
-  private readonly postsDir = joinPaths(
-    config.get<string>('git.repoDir'),
-    config.get<string>('git.postsDir')
-  );
 
   @inject(GitService)
   private gitService!: GitService;
@@ -27,8 +21,6 @@ export class ChannelSyncService {
   public async syncChannelInfo(syncFlags: {
     logo?: boolean,
   }) {
-    let configFile: string | undefined;
-
     if (syncFlags.logo) {
       const channelInfo = <Api.ChannelFull>(await this.client.invoke(
         new Api.channels.GetFullChannel({
@@ -44,9 +36,5 @@ export class ChannelSyncService {
         await this.gitService.add(relLogoPath);
       }
     }
-
-    if (configFile) await writeFile(this.absPathToConfig, configFile, 'utf-8');
-    await this.gitService.add(this.configFileName);
-
   }
 }

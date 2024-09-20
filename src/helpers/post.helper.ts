@@ -13,7 +13,7 @@ class PostHelper {
   private readonly relPostsDir = config.get<string>("git.postsDir");
   private readonly channelId = config.get<string>('botConfig.channelId');
 
-  private readonly frontMatter = '+++\ntitle = "$title"\ndate = $date\n\n[extra]\nimages: [$images]\n+++\n\n';
+  private readonly frontMatter = '+++\ntitle = "$title"\ndate = $date\n\n[extra]\nimages = [$images]\n+++\n\n';
 
   setTitle: (content?: string) => string = () => this.channelId;
   extraContentProcessor?: (content: string) => string;
@@ -35,7 +35,9 @@ class PostHelper {
   }
 
   async getEditablePostId(post: ChannelPost): Promise<number> {
-    const postFiles: number[] = (await readdir(this.postsDir)).map((fileOrDir) => {
+    const postFiles: number[] = (await readdir(this.postsDir)).filter((fileOrDir) => {
+      return !fileOrDir.includes('index');
+    }).map((fileOrDir) => {
       if (fileOrDir.includes('.')) {
         return Number.parseInt(fileOrDir.split('.')[0], 10);
       } else {

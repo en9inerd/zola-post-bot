@@ -31,17 +31,17 @@
   "homepage": "https://github.com/en9inerd/zola-post-bot#readme",
   "dependencies": {
     "isomorphic-git": "^1.27.1",
-    "telebuilder": "^0.7.13",
-    "telegram": "^2.24.11"
+    "telebuilder": "^0.7.14",
+    "telegram": "^2.25.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
+    "@biomejs/biome": "1.9.2",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "dotenv": "^16.4.5",
-    "husky": "^9.1.5",
-    "nodemon": "^3.1.4",
+    "husky": "^9.1.6",
+    "nodemon": "^3.1.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   }
 }
