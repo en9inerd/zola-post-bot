@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/en9inerd/zola-post-bot/compare/v1.0.0...v1.0.1) (2024-09-20)
+
+
+### Bug Fixes
+
+* Add 'exportedData' to .gitignore and remove 'stat' option from sync-channel-info.command.ts ([2db2a9a](https://github.com/en9inerd/zola-post-bot/commit/2db2a9a13d29031533c5f8340983d2e47f0e01bf))
+
 # 1.0.0 (2024-09-18)
 
 
