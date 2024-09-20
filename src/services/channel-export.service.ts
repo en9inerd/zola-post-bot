@@ -111,15 +111,15 @@ export class ChannelExportService {
   public async start(): Promise<void> {
     if (await this.gitService.repoExists()) {
       await this.gitService.pull();
-
-      try {
-        if ((await readdir(this.postsDir).catch(() => [])).length > 1) return;
-      } catch (err) {
-        // ignore
-      }
     } else {
       await this.gitService.clone();
       await this.gitService.assignAuthor();
+    }
+
+    try {
+      if ((await readdir(this.postsDir).catch(() => [])).length > 1) return;
+    } catch (err) {
+      // ignore
     }
 
     try {
