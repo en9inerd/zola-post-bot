@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/en9inerd/zola-post-bot/compare/v1.0.1...v1.0.2) (2024-09-20)
+
+
+### Bug Fixes
+
+* Improve start method in ChannelExportService ([c2dc984](https://github.com/en9inerd/zola-post-bot/commit/c2dc984a9cfec10de3af590a702e6267aadaeafb))
+
 ## [1.0.1](https://github.com/en9inerd/zola-post-bot/compare/v1.0.0...v1.0.1) (2024-09-20)
 
 
