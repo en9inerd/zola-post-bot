@@ -22,7 +22,7 @@ export class PostService {
   private readonly spoilerRegex = /<spoiler>([\s\S]*?)<\/spoiler>/g;
   private readonly spoilerReplacer = '<span class="spoiler">$1</span>';
   private readonly codeRegex = /<pre><code class="language-(.*?)">([\s\S]*?)<\/code><\/pre>/g;
-  private readonly codeReplacer = '{% highlight $1 %}\n$2\n{% endhighlight %}';
+  private readonly codeReplacer = '```$1\n$2\n```';
 
   @inject(GitService)
   private gitService!: GitService;

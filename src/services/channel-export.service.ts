@@ -161,7 +161,7 @@ export class ChannelExportService {
       case 'code':
         return `<code>${entity.text}</code>`;
       case 'pre':
-        return `{% highlight ${entity.language} %}\n${entity.text}\n{% endhighlight %}`;
+        return `\`\`\`${entity.language}\n${entity.text}\n\`\`\``;
       case 'link':
         return `<a href="${entity.text}">${entity.text}</a>`;
       case 'text_link':
