@@ -1,6 +1,6 @@
 {
   "name": "zola-post-bot",
-  "version": "1.0.5",
+  "version": "1.0.3",
   "description": "Bot to post telegram channel messages on website based on Zola.",
   "type": "module",
   "private": true,

@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/en9inerd/zola-post-bot/compare/v1.0.2...v1.0.3) (2024-11-24)
+
+
+### Bug Fixes
+
+* update code formatting in ChannelExportService and PostService for proper Markdown code block syntax ([4477780](https://github.com/en9inerd/zola-post-bot/commit/44777803cb349c4e3f3619a713166d28fe52bee1))
+
 ## [1.0.5](https://github.com/en9inerd/zola-post-bot/compare/v1.0.4...v1.0.5) (2024-11-24)
 
 
