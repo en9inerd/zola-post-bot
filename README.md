@@ -1,5 +1,7 @@
 # Zola Post Bot
 
+> **Note**: This repository has been archived. It depends on [TeleBuilder](https://github.com/en9inerd/telebuilder), which relies on the [GramJS](https://github.com/gram-js/gramjs) library that is no longer actively maintained. If you're looking for a replacement, check out [PostPal](https://github.com/en9inerd/postpal) — a similar project written in Go.
+
 Telegram bot to copy new posts from a channel to a Zola blog based on GitHub Actions.
 
 Example of adopted Zola theme: [after-dark](https://github.com/en9inerd/after-dark)
